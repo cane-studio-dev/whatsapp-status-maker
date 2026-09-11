@@ -1,0 +1,52 @@
+name: status_quote_maker
+description: تطبيق صانع حالات واتساب وستوري (خلفيات + خطوط عربية + إطار Ring Light متحرك)
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # لعرض واختيار خطوط عربية جميلة (Cairo, Aref Ruqaa, Amiri, Lalezar...)
+  google_fonts: ^6.2.1
+
+  # لالتقاط صورة (Screenshot) من تصميم الستوري وتصديره
+  screenshot: ^3.0.0
+
+  # لحفظ الصورة/الفيديو في معرض الهاتف
+  image_gallery_saver: ^2.0.3
+
+  # لمشاركة الملف الناتج مباشرة على واتساب وغيره
+  share_plus: ^10.0.2
+
+  # لإدارة المسارات المؤقتة على الجهاز
+  path_provider: ^2.1.4
+
+  # لدعم الألوان المتدرجة الجاهزة بشكل أسهل
+  provider: ^6.1.2
+
+  # حزمة اختيارية لتحويل مجموعة صور إلى فيديو قصير (تحتاج إعداد إضافي على أندرويد)
+  ffmpeg_kit_flutter_new: ^1.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/backgrounds/
+
+  # يجب إضافة ملفات الخطوط الفعلية (.ttf) هنا بعد تنزيلها من Google Fonts
+  # مثال:
+  # fonts:
+  #   - family: ArefRuqaa
+  #     fonts:
+  #       - asset: assets/fonts/ArefRuqaa-Regular.ttf
+  #       - asset: assets/fonts/ArefRuqaa-Bold.ttf
+  #         weight: 700
